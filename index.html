@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandeep Yadav - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Portfolio</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="greeting">Hello, I'm</span>
+                    <span class="name">Sandeep Yadav</span>
+                </h1>
+                <p class="hero-subtitle">R&D Software Developer & Test Engineer | Automotive Software Engineer</p>
+                <p class="hero-description">Passionate about autonomous driving, robotics, and embedded systems. Specialized in AD/ADAS development, perception algorithms, and automotive software validation.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/sandeep-yadav-25375891" class="social-link" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/sandeep-automotiveTUC" class="social-link" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:msc.sandeepyadav@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm an R&D Software Developer & Test Engineer with extensive experience in autonomous driving, ADAS systems, and automotive software development. Currently working at Momenta GmbH, I specialize in perception algorithms, object detection, and multi-modal sensor fusion for L2/L2++ autonomous driving systems.</p>
+                    <p>My expertise spans from developing ML models for CPU-usage prediction to architecting virtual test environments for E-Mobility software validation. I hold an M.Sc. in Automotive Software Engineering from Technical University of Chemnitz (Grade: 1.8) and have worked with leading automotive companies including BMW AG and CARIAD SE.</p>
+                    <p>I'm passionate about robotics, embedded systems, CAN/CAN-FD protocols, and ROS/ROS2 frameworks. My work involves end-to-end development from algorithm design to system validation, following ISO 26262 standards and V-Model development lifecycle.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">6+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Research Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Virtual Test Environment - Master Thesis -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Virtual Test Environment for E-Mobility</h3>
+                        <p class="project-description">Architected and implemented a virtual test environment for E-Mobility software validation by integrating HiL test benches, SiL and plant models, vECU/XIL prototypes, and RestBus communication. Enabled end-to-end automated test execution and traceable result analysis.</p>
+                        <div class="project-tags">
+                            <span class="tag">ECU.TEST</span>
+                            <span class="tag">Matlab/Simulink</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Jenkins</span>
+                            <span class="tag">BMW AG</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Object Detection Systems -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AD/ADAS Object Detection Systems</h3>
+                        <p class="project-description">Built and deployed CI/CD-driven object detection systems using YOLO, R-CNN, and Fast R-CNN for L2/L2++ autonomous driving. Implemented multi-modal sensor fusion (camera, radar, LiDAR) with V-Model development lifecycle and managed data pipeline for 50,000+ labeled ADAS frames.</p>
+                        <div class="project-tags">
+                            <span class="tag">YOLO</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">C/C++</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Models for CPU Usage -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">ML Models for CPU Usage Prediction</h3>
+                        <p class="project-description">Developed and validated ML models (KNN, CNN, Linear & Polynomial Regression) for CPU-usage prediction using controlled datasets. Applied ISO 26262-aligned verification, documentation, and reproducibility practices with FMEA/FTA-based safety analysis.</p>
+                        <div class="project-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">ISO 26262</span>
+                            <span class="tag">CARIAD SE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Robotic Arm Control System -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Robotic Arm Control System</h3>
+                        <p class="project-description">A comprehensive robotic control system built with ROS2, featuring real-time control, path planning, motion-planning algorithms, multi-modal perception pipelines, SLAM architectures, and forward/inverse kinematic modeling for autonomous navigation.</p>
+                        <div class="project-tags">
+                            <span class="tag">ROS2</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">SLAM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Automatic Parking Algorithms -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-parking"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Algorithms for Automatic Parking</h3>
+                        <p class="project-description">Developed different algorithms to automate parking systems using various technological methods. The system enables vehicles to search for parking spots, determine if the vehicle can fit, figure out vehicle position and standpoint, and finally maneuver the vehicle into the spot.</p>
+                        <div class="project-tags">
+                            <span class="tag">Algorithms</span>
+                            <span class="tag">Automotive</span>
+                            <span class="tag">Research</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sentiment Analysis CNN -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sentiment Analysis using CNN</h3>
+                        <p class="project-description">Bachelor Thesis: Proposed a multidimensional sentiment classification method based on microblog emotion classification of Twitter data through CNN. Achieved better accuracy performance than traditional methods like SVM & Naive Bayes using N-Gram features and word-sentiment polarity scores.</p>
+                        <div class="project-tags">
+                            <span class="tag">CNN</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">C/C++</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL/PLSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript/HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Frameworks & Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">ROS/ROS2</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PyTorch/TensorFlow</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Matlab/Simulink</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CANoe/CANalyser</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Other Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">CAN/CAN-FD</span>
+                        <span class="skill-tag">AUTOSAR</span>
+                        <span class="skill-tag">ISO 26262</span>
+                        <span class="skill-tag">AD/ADAS</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Embedded Systems</span>
+                        <span class="skill-tag">Robotics</span>
+                        <span class="skill-tag">SLAM</span>
+                        <span class="skill-tag">FPGA</span>
+                        <span class="skill-tag">PLC</span>
+                        <span class="skill-tag">dSPACE</span>
+                        <span class="skill-tag">ECU.TEST</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">GitLab</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS/Azure</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements & Certifications</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="achievement-title">M.Sc. Automotive Software Engineering</h3>
+                    <p class="achievement-description">Technical University of Chemnitz - Grade: 1.8 (Excellent). Specialized in automotive software development, embedded systems, and autonomous driving technologies.</p>
+                    <span class="achievement-date">2021-2025</span>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="achievement-title">Core JAVA & C/C++ Certification</h3>
+                    <p class="achievement-description">Certified in Core Java and C/C++ programming languages, demonstrating proficiency in object-oriented programming and system-level development.</p>
+                    <span class="achievement-date">Certified</span>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="achievement-title">Cisco Certification</h3>
+                    <p class="achievement-description">Cisco certified professional with expertise in networking and communication protocols relevant to automotive systems.</p>
+                    <span class="achievement-date">Certified</span>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3 class="achievement-title">Class B Driver's License</h3>
+                    <p class="achievement-description">Valid driver's license enabling practical testing and validation of automotive systems and ADAS features.</p>
+                    <span class="achievement-date">Valid</span>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="achievement-title">AUTOSAR RTE Test Research</h3>
+                    <p class="achievement-description">Research project focusing on AUTOSAR architecture, RTE testing methods, and comparison of CAN bus and FlexRay communication protocols.</p>
+                    <span class="achievement-date">2022</span>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="achievement-title">Magnetoresistive Sensor Optimization</h3>
+                    <p class="achievement-description">Research on optimizing temperature drift of magnetoresistive throttle position sensors using voltage follower circuits for contactless applications.</p>
+                    <span class="achievement-date">2022</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-description">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:msc.sandeepyadav@gmail.com" style="color: inherit; text-decoration: none;">msc.sandeepyadav@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+4915213274569" style="color: inherit; text-decoration: none;">+49 15213274569</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Königstraße 58, 71139 Ehningen, Germany</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-input form-textarea" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sandeep Yadav. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
