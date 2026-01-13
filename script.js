@@ -66,6 +66,20 @@ animateElements.forEach(el => {
     observer.observe(el);
 });
 
+// Make entire project card clickable (fallback if overlay is hard to click)
+document.querySelectorAll('.project-card').forEach(card => {
+    const primaryLink = card.querySelector('.project-overlay .project-link');
+    if (!primaryLink) return;
+    card.style.cursor = 'pointer';
+
+    card.addEventListener('click', (e) => {
+        // If the actual icon/link was clicked, let the browser handle it
+        if (e.target.closest('a')) return;
+        // Otherwise, open the primary link (GitHub profile) in a new tab
+        window.open(primaryLink.href, '_blank', 'noopener,noreferrer');
+    });
+});
+
 // Animate skill bars
 const skillBars = document.querySelectorAll('.skill-progress');
 const skillObserver = new IntersectionObserver((entries) => {
@@ -84,25 +98,106 @@ skillBars.forEach(bar => {
     skillObserver.observe(bar);
 });
 
+// Initialize EmailJS
+(function() {
+    // Replace 'YOUR_PUBLIC_KEY' with your EmailJS public key after setup
+    emailjs.init("YOUR_PUBLIC_KEY"); // You'll replace this after EmailJS setup
+})();
+
 // Form submission handler
-const contactForm = document.querySelector('.contact-form');
+const contactForm = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const formMessage = document.getElementById('form-message');
+
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
         // Get form data
         const formData = new FormData(contactForm);
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        const subject = contactForm.querySelectorAll('input[type="text"]')[1].value;
-        const message = contactForm.querySelector('textarea').value;
+        const name = formData.get('user_name');
+        const email = formData.get('user_email');
+        const subject = formData.get('subject');
+        const message = formData.get('message');
         
-        // Here you would typically send the data to a server
-        // For now, we'll just show an alert
-        alert(`Thank you for your message, ${name}! I'll get back to you soon.`);
+        // Disable submit button and show sending message
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        formMessage.className = 'form-message sending';
+        formMessage.textContent = 'Sending your message...';
+        formMessage.style.display = 'block';
         
-        // Reset form
-        contactForm.reset();
+        try {
+            // Email template parameters for YOUR inbox (notification email)
+            const serviceParams = {
+                service_id: 'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+                template_id: 'YOUR_TEMPLATE_ID', // Replace with your notification template ID
+                public_key: 'YOUR_PUBLIC_KEY', // Replace with your EmailJS public key
+                template_params: {
+                    'from_name': name,
+                    'from_email': email,
+                    'subject': subject,
+                    'message': message,
+                    'to_email': 'msc.sandeepyadav@gmail.com'
+                }
+            };
+            
+            // Email template parameters for SENDER (confirmation email)
+            const confirmationParams = {
+                service_id: 'YOUR_SERVICE_ID', // Same service ID
+                template_id: 'YOUR_CONFIRMATION_TEMPLATE_ID', // Replace with confirmation template ID
+                public_key: 'YOUR_PUBLIC_KEY',
+                template_params: {
+                    'to_name': name,
+                    'to_email': email,
+                    'from_name': 'Sandeep Yadav',
+                    'reply_to': 'msc.sandeepyadav@gmail.com'
+                }
+            };
+            
+            // Send notification email to you
+            await emailjs.send(
+                serviceParams.service_id,
+                serviceParams.template_id,
+                serviceParams.template_params,
+                serviceParams.public_key
+            );
+            
+            // Send confirmation email to sender
+            await emailjs.send(
+                confirmationParams.service_id,
+                confirmationParams.template_id,
+                confirmationParams.template_params,
+                confirmationParams.public_key
+            );
+            
+            // Success message
+            formMessage.className = 'form-message success';
+            formMessage.textContent = `Thank you, ${name}! Your message has been sent. I'll get back to you soon. A confirmation email has been sent to ${email}.`;
+            formMessage.style.display = 'block';
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Re-enable submit button after 3 seconds
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+                formMessage.style.display = 'none';
+            }, 5000);
+            
+        } catch (error) {
+            console.error('Email sending failed:', error);
+            
+            // Error message
+            formMessage.className = 'form-message error';
+            formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or contact me directly at msc.sandeepyadav@gmail.com';
+            formMessage.style.display = 'block';
+            
+            // Re-enable submit button
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+        }
     });
 }
 
